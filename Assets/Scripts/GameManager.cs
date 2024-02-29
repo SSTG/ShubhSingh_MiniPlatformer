@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
-    // Start is called before the first frame update
-    int firstTime=1;
-    int score;
-    public int FirstTime{ get { return firstTime;}}
-    public int Score{ get { return score;}}
+    // Something to be done about static
+    
+    static int firstTime=1;
+    static int score;
+    static float countDown=0;
+    public static  int FirstTime{ get { return firstTime;} set { firstTime=value;}}
+    public static int Score{ get { return score;} set { score=value;}}
+    public static float CountDown{ get{ return CountDown;}set { CountDown=value;}}
     void Start()
     {
         if(!PlayerPrefs.HasKey("FirstTime"))
@@ -21,6 +24,7 @@ public class GameManager : Singleton<GameManager>
     // Update is called once per frame
     void Update()
     {
-        
+        countDown+=Time.deltaTime;
+        Debug.Log(countDown);
     }
 }
