@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 449868846}
   - component: {fileID: 449868845}
   - component: {fileID: 449868844}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -467,6 +467,38 @@ PrefabInstance:
     - target: {fileID: 224991926497498341, guid: 93fa432be5c4af044b21592ada451b1e, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 224991926497498364, guid: 93fa432be5c4af044b21592ada451b1e, type: 3}
+      propertyPath: m_Parameters.textureMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224991926497498364, guid: 93fa432be5c4af044b21592ada451b1e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 224991926497498364, guid: 93fa432be5c4af044b21592ada451b1e, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224991926497498364, guid: 93fa432be5c4af044b21592ada451b1e, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224991926497498364, guid: 93fa432be5c4af044b21592ada451b1e, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224991926497498364, guid: 93fa432be5c4af044b21592ada451b1e, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224991926497498364, guid: 93fa432be5c4af044b21592ada451b1e, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224991926497498364, guid: 93fa432be5c4af044b21592ada451b1e, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.r
+      value: 0.22260165
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
