@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     Rigidbody rb;
     [SerializeField]float jumpForce;
+    [SerializeField]float surfaceCheckRadius;
     [SerializeField]float dashForce;
     void Start()
     {
@@ -21,12 +22,8 @@ public class PlayerMovement : MonoBehaviour
     void OnDisable()
     {
         InputManager.onDirectionsPressed-=MovePlayer;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        InputManager.onJumpPressed-=JumpPlayer;
+        InputManager.onDashPressed-=DashPlayer;
     }
     void MovePlayer(float movement)
     {
@@ -34,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void JumpPlayer()
     {
+        if(Physics.CheckSphere(transform.position,surfaceCheckRadius))
         rb.AddForce(new Vector3(0,jumpForce,0),ForceMode.Force);
     }
     void DashPlayer()
