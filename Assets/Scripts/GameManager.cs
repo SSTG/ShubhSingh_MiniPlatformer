@@ -11,11 +11,11 @@ public class GameManager : Singleton<GameManager>
     [Header("UI Elements")]
     [SerializeField]Text scoreText;
     [SerializeField]Text countDownText;
-    static int firstTime=1;
+    
     bool isPaused=false;
     static int score;
     static float countDown=0;
-    public static  int FirstTime{ get { return firstTime;} set { firstTime=value;}}
+   
     public static int Score{ get { return score;} set { score=value;}}
     public static float CountDown{ get{ return CountDown;}set { CountDown=value;}}
     public UnityEvent onPausedGame;
@@ -26,10 +26,7 @@ public class GameManager : Singleton<GameManager>
     }
     void Start()
     {
-        if(!PlayerPrefs.HasKey("FirstTime"))
-        {
-            
-        }
+       
     }
     void OnEnable()
     {
