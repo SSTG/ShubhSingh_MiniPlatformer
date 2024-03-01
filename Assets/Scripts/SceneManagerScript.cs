@@ -9,9 +9,8 @@ public class SceneManagerScript : Singleton<SceneManagerScript>
     public UnityEvent firstTimePlay;
     void Start()
     {
-        if(!PlayerPrefs.HasKey("FirstTime"))
+        if(!PlayerPrefs.HasKey("HighScore"))
         firstTimePlay?.Invoke();
-        PlayerPrefs.SetInt("FirstTime",1);
 
     }
     public static void ChangeScene(int index)

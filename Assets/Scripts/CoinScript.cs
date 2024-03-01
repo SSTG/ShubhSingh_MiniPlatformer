@@ -31,7 +31,8 @@ public class CoinScript : MonoBehaviour
     public void CollectCoin()
     {
         GameManager.Score+=scorePoints;
-        GameManager.CountDown+=timePoints;
+        //GameManager.CountDown+=timePoints;
+        
         
         Destroy(this.gameObject);
     }

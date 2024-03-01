@@ -10,6 +10,7 @@ public class GameManager : Singleton<GameManager>
     // Something to be done about static
     [Header("UI Elements")]
     [SerializeField]Text scoreText;
+    [SerializeField]Text highScoreText;
     [SerializeField]Text countDownText;
     
     bool isPaused=false;
@@ -26,7 +27,8 @@ public class GameManager : Singleton<GameManager>
     }
     void Start()
     {
-       
+       if(PlayerPrefs.HasKey("HighScore"))
+       highScoreText.text=PlayerPrefs.GetInt("HighScore").ToString();
     }
     void OnEnable()
     {
@@ -36,7 +38,6 @@ public class GameManager : Singleton<GameManager>
     {
         InputManager.onPauseGame-=PauseGame;
     }
-    //High Score Calculation Function TBD
 
     // Update is called once per frame
     void Update()
@@ -59,5 +60,10 @@ public class GameManager : Singleton<GameManager>
         Time.timeScale=1;
         isPaused=false;
         onUnpausedGame?.Invoke();
+    }
+    public void SaveScore()
+    {
+        if(PlayerPrefs.HasKey("HighScore") && score>=PlayerPrefs.GetInt("HighScore"))
+        PlayerPrefs.SetInt("HighScore",score);
     }
 }

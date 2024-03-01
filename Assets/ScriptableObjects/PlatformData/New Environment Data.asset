@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: New Environment Data
   m_EditorClassIdentifier: 
   movementType: 0
-  isDeadly: 1
-  movementRange: 5
+  isDeadly: 0
+  movementRange: 10
+  movementTime: 10

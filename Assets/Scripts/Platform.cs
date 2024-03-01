@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using DG.Tweening;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -8,6 +9,7 @@ public class Platform : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField]EnvironmentData environmentData;
+    public UnityEvent onPlayerDeath;
     Vector3 initialPosition;
     void Start()
     {
@@ -25,7 +27,11 @@ public class Platform : MonoBehaviour
         if(other.gameObject.CompareTag("Player") && environmentData.isDeadly)
         KillPlayer();
     }
-    void KillPlayer(){Debug.Log("Dead!");}
+    void KillPlayer()
+    {
+        onPlayerDeath?.Invoke();
+    Debug.Log("Dead!");
+    }
     void MovePlatform()
     {
         switch(environmentData.movementType)
