@@ -11,7 +11,10 @@ public class CoinData : ScriptableObject
     [Header("Score Variables")]
     public int scorePoints;
     public int timePoints;
+    [Header("Sound Info")]
+    public AudioClip onCollectSound;
     [Header("Other Info")]
     public string name;
+    
    
 }

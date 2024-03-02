@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 
+
 public class GameManager : Singleton<GameManager>
 {
     // Something to be done about static

@@ -9,6 +9,7 @@ public class Platform : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField]EnvironmentData environmentData;
+    [SerializeField]Transform childObject;
     public UnityEvent onPlayerDeath;
     Vector3 initialPosition;
     void Start()
@@ -26,20 +27,21 @@ public class Platform : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player"))
         {
+            
             if(environmentData.isDeadly)
             KillPlayer();
-        //     else{
-        //     other.gameObject.transform.SetParent(transform);
-        //     other.gameObject.transform.localScale=new Vector3(1/transform.localScale.x,1,1);
-        // }
+            else{
+            other.gameObject.transform.SetParent(childObject);
+        }
     }
     }
-    //  void OnCollisionExit(Collision other) {
-    //     if(other.gameObject.CompareTag("Player")){
-    //      other.gameObject.transform.SetParent(null);
-    //      other.gameObject.transform.localScale=new Vector3(1,1,1);
-    // }
-    //  }
+     void OnCollisionExit(Collision other) {
+        if(other.gameObject.CompareTag("Player")){
+         other.gameObject.transform.SetParent(null);
+        
+       
+    }
+     }
     void KillPlayer()
     {
         onPlayerDeath?.Invoke();

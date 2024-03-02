@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 985176962650483585}
   - component: {fileID: 3014708304757652183}
   - component: {fileID: 7770929268120829479}
+  - component: {fileID: 3544698593209358500}
   m_Layer: 0
   m_Name: BoxTrigger
   m_TagString: Untagged
@@ -54,3 +55,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3544698593209358500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5365491988401507530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e560b2d200d85c644bc199e118f46e80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onTrigger:
+    m_PersistentCalls:
+      m_Calls: []
+  onUntrigger:
+    m_PersistentCalls:
+      m_Calls: []

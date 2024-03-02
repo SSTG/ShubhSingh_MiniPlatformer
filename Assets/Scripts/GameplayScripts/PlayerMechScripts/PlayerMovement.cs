@@ -45,7 +45,10 @@ public class PlayerMovement : MonoBehaviour
     }
     void DashPlayer()
     {
+        if(Input.GetAxis("Horizontal")>0)
         rb.AddForce(new Vector3(dashForce,0,0),ForceMode.Impulse);
+        else
+        rb.AddForce(new Vector3(-dashForce,0,0),ForceMode.Impulse);
     }
     
 }
