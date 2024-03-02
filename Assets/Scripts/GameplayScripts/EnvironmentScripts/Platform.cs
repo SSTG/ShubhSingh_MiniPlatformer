@@ -24,7 +24,7 @@ public class Platform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Velocity "+GetComponent<Rigidbody>().velocity);
+        
     }
     void OnCollisionEnter(Collision other)
     {
@@ -34,9 +34,7 @@ public class Platform : MonoBehaviour
             
         }
         
-    // if(environmentData.movementType==EnvironmentData.MovementType.Horizontal)
-    other.transform.SetParent(childObject,true);
-     other.gameObject.GetComponent<Rigidbody>().isKinematic=true;
+   
     }
      void OnCollisionExit(Collision other) {
         if(other.gameObject.CompareTag("Player")){

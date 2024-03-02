@@ -10,8 +10,8 @@ public class SoundManager : Singleton<SoundManager>
     
    void Awake()
    {
-    musicSource.volume=PlayerPrefs.GetFloat("MusicVolume")==null ? 0.5f:PlayerPrefs.GetFloat("MusicVolume");
-    sfxSource.volume=PlayerPrefs.GetFloat("SFXVolume")==null ? 0.5f: PlayerPrefs.GetFloat("SFXVolume");
+    musicSource.volume=!PlayerPrefs.HasKey("MusicVolume") ? 0.5f:PlayerPrefs.GetFloat("MusicVolume");
+    sfxSource.volume=!PlayerPrefs.HasKey("SFXVolume") ? 0.5f: PlayerPrefs.GetFloat("SFXVolume");
     musicSource.Play();
     
    }

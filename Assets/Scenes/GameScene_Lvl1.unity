@@ -447,11 +447,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6460194175858689624, guid: 9fbdf10354154c444a7b23a4a623850d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 144.6
+      value: 137.16
       objectReference: {fileID: 0}
     - target: {fileID: 6460194175858689624, guid: 9fbdf10354154c444a7b23a4a623850d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.37
+      value: 5.67
       objectReference: {fileID: 0}
     - target: {fileID: 6460194175858689624, guid: 9fbdf10354154c444a7b23a4a623850d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -743,7 +743,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 355263341}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 108.82, y: 29.49, z: 0}
+  m_LocalPosition: {x: 104.6, y: 26.22, z: 0}
   m_LocalScale: {x: 17.786648, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1506,7 +1506,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 675452506}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 159.34, y: 15.76, z: 0}
+  m_LocalPosition: {x: 151.9, y: 15.76, z: 0}
   m_LocalScale: {x: 17.786648, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3013,31 +3013,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3544698593209358500, guid: e7b4dd12d3d35134db0f1fc460ccf8dc, type: 3}
       propertyPath: onTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3544698593209358500, guid: e7b4dd12d3d35134db0f1fc460ccf8dc, type: 3}
       propertyPath: onTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2088408916}
+      objectReference: {fileID: 2088408917}
     - target: {fileID: 3544698593209358500, guid: e7b4dd12d3d35134db0f1fc460ccf8dc, type: 3}
       propertyPath: onTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3544698593209358500, guid: e7b4dd12d3d35134db0f1fc460ccf8dc, type: 3}
       propertyPath: onTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: ChangeScene
       objectReference: {fileID: 0}
     - target: {fileID: 3544698593209358500, guid: e7b4dd12d3d35134db0f1fc460ccf8dc, type: 3}
       propertyPath: onTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: 
+      value: SceneManagerScript, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3544698593209358500, guid: e7b4dd12d3d35134db0f1fc460ccf8dc, type: 3}
       propertyPath: onTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: 
+      value: GameScene_Lvl2
       objectReference: {fileID: 0}
     - target: {fileID: 3544698593209358500, guid: e7b4dd12d3d35134db0f1fc460ccf8dc, type: 3}
       propertyPath: onTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: 
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5365491988401507530, guid: e7b4dd12d3d35134db0f1fc460ccf8dc, type: 3}
       propertyPath: m_Name
@@ -3523,13 +3523,13 @@ MonoBehaviour:
       - m_Target: {fileID: 2088408917}
         m_TargetAssemblyTypeName: SceneManagerScript, Assembly-CSharp
         m_MethodName: ChangeScene
-        m_Mode: 3
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: StartMenu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1265090745
@@ -3645,7 +3645,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1299443135}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 128.69, y: 29.49, z: 0}
+  m_LocalPosition: {x: 124.47, y: 26.22, z: 0}
   m_LocalScale: {x: 17.786648, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4571,7 +4571,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1789476586}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 111.2, y: 30.5, z: 0}
+  m_LocalPosition: {x: 111.2, y: 27.23, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5608,7 +5608,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224991926497498337, guid: 93fa432be5c4af044b21592ada451b1e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.85
       objectReference: {fileID: 0}
     - target: {fileID: 224991926497498337, guid: 93fa432be5c4af044b21592ada451b1e, type: 3}
       propertyPath: m_LocalPosition.y

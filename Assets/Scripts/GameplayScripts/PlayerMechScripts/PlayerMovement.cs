@@ -36,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void MovePlayer(float movement)
     {
+        
         rb.velocity=new Vector3(movement*moveSpeedMultiplier,rb.velocity.y,0);
     }
     void JumpPlayer()
