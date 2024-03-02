@@ -15,4 +15,5 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: 346ac1ad178ddc0419946fefc9a6281c, type: 2}
   scorePoints: 5
   timePoints: 0
+  onCollectSound: {fileID: 8300000, guid: 0ed2544b660865945914cf586337af87, type: 3}
   name: Bronze

@@ -25,11 +25,13 @@ public class GameManager : Singleton<GameManager>
     void Awake()
     {
         Time.timeScale=1;
+        countDown=0;
+        score=0;
     }
     void Start()
     {
        if(PlayerPrefs.HasKey("HighScore"))
-       highScoreText.text=PlayerPrefs.GetInt("HighScore").ToString();
+       highScoreText.text="High Score "+PlayerPrefs.GetInt("HighScore").ToString();
     }
     void OnEnable()
     {
@@ -46,6 +48,12 @@ public class GameManager : Singleton<GameManager>
         countDown+=Time.deltaTime;
         scoreText.text="Points Collected :"+score.ToString("00");
         countDownText.text=((int)countDown/60).ToString("00")+" : "+((int)countDown%60).ToString("00");
+    }
+    public void DestroyPlayer()
+    {
+        Destroy(GameObject.FindWithTag("Player"));
+        Destroy(FindObjectOfType<CameraFollow>());
+        Time.timeScale=0;
     }
     public void PauseGame()
     {

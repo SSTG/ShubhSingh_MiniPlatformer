@@ -58,6 +58,7 @@ GameObject:
   - component: {fileID: 6460194175858689625}
   - component: {fileID: 6460194175858689573}
   - component: {fileID: 6460194175858689572}
+  - component: {fileID: -1505909246218955523}
   m_Layer: 0
   m_Name: BasePlatform
   m_TagString: Untagged
@@ -142,8 +143,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 0.13573033, z: 1}
+  m_Center: {x: 0, y: 0.43213484, z: 0}
 --- !u!54 &6460194175858689573
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -177,3 +178,18 @@ MonoBehaviour:
   onPlayerDeath:
     m_PersistentCalls:
       m_Calls: []
+--- !u!138 &-1505909246218955523
+FixedJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6460194175858689627}
+  m_ConnectedBody: {fileID: 0}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_BreakForce: 10
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1

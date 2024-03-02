@@ -1,19 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class SoundManager : Singleton<SoundManager>
 {
     // Start is called before the first frame update
-    public static AudioSource audioSource;
+    public AudioSource musicSource;
+    public AudioSource sfxSource;
+    
    void Awake()
    {
-    audioSource=GetComponent<AudioSource>();
+    musicSource.volume=PlayerPrefs.GetFloat("MusicVolume")==null ? 0.5f:PlayerPrefs.GetFloat("MusicVolume");
+    sfxSource.volume=PlayerPrefs.GetFloat("SFXVolume")==null ? 0.5f: PlayerPrefs.GetFloat("SFXVolume");
+    musicSource.Play();
+    
    }
-   public static void PlaySound(AudioClip audioClip)
+   public void PlaySound(AudioClip audioClip)
    {
-    audioSource.clip=audioClip;
-    audioSource.loop=false;
-    audioSource.Play();
+    sfxSource.clip=audioClip;
+    sfxSource.loop=false;
+    sfxSource.Play();
+   }
+   public void SetMusicVolume(Slider slider)
+   {
+    
+    musicSource.volume=slider.value;
+    PlayerPrefs.SetFloat("MusicVolume",slider.value);
+   }
+   public void SetSFXVolume(Slider slider)
+   {
+    
+    sfxSource.volume=slider.value;
+    PlayerPrefs.SetFloat("SFXVolume",slider.value);
    }
 }

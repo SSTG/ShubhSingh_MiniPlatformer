@@ -10,11 +10,13 @@ public class CoinScript : MonoBehaviour
     MeshRenderer meshRenderer;
     UIManager uiManager;
     int scorePoints;
+    SoundManager soundManager;
     int timePoints=0;//By how much the countdown would be decreased, if at all
     void Awake()
     {
         meshRenderer=GetComponent<MeshRenderer>();
         uiManager=FindObjectOfType<UIManager>();
+        soundManager=FindObjectOfType<SoundManager>();
         meshRenderer.material=coinData.material;
     }
     void Start()
@@ -34,7 +36,7 @@ public class CoinScript : MonoBehaviour
     {
         GameManager.Score+=scorePoints;
         //GameManager.CountDown+=timePoints;
-        SoundManager.PlaySound(coinData.onCollectSound);
+        soundManager.PlaySound(coinData.onCollectSound);
         uiManager.FadeInText(coinData.name+" Coin!!!");
         colorChange.FadeInColor(coinData.material.color);
         Invoke(nameof(uiManager.FadeOutText),2f);

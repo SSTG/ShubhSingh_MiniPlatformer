@@ -15,4 +15,5 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: 2e41aaf087fec894eb22974ff1a8e996, type: 2}
   scorePoints: 15
   timePoints: 5
+  onCollectSound: {fileID: 8300000, guid: 0ed2544b660865945914cf586337af87, type: 3}
   name: Gold

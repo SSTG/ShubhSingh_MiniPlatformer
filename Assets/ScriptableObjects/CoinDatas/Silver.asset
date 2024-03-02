@@ -15,4 +15,5 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: 9dc8e882da93a6746997099bdbc34b7c, type: 2}
   scorePoints: 10
   timePoints: 0
+  onCollectSound: {fileID: 8300000, guid: 0ed2544b660865945914cf586337af87, type: 3}
   name: Silver
