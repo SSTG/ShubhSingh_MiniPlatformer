@@ -24,9 +24,22 @@ public class Platform : MonoBehaviour
     }
     void OnCollisionEnter(Collision other)
     {
-        if(other.gameObject.CompareTag("Player") && environmentData.isDeadly)
-        KillPlayer();
+        if(other.gameObject.CompareTag("Player"))
+        {
+            if(environmentData.isDeadly)
+            KillPlayer();
+        //     else{
+        //     other.gameObject.transform.SetParent(transform);
+        //     other.gameObject.transform.localScale=new Vector3(1/transform.localScale.x,1,1);
+        // }
     }
+    }
+    //  void OnCollisionExit(Collision other) {
+    //     if(other.gameObject.CompareTag("Player")){
+    //      other.gameObject.transform.SetParent(null);
+    //      other.gameObject.transform.localScale=new Vector3(1,1,1);
+    // }
+    //  }
     void KillPlayer()
     {
         onPlayerDeath?.Invoke();
@@ -36,9 +49,9 @@ public class Platform : MonoBehaviour
     {
         switch(environmentData.movementType)
         {
-            case EnvironmentData.MovementType.Horizontal: transform.DOMoveX(environmentData.movementRange,environmentData.movementTime).
+            case EnvironmentData.MovementType.Horizontal: transform.DOMoveX(transform.position.x+environmentData.movementRange,environmentData.movementTime).
             SetLoops(-1, LoopType.Yoyo); break;
-            case EnvironmentData.MovementType.Vertical : transform.DOMoveY(environmentData.movementRange,environmentData.movementTime).
+            case EnvironmentData.MovementType.Vertical : transform.DOMoveY(transform.position.y+environmentData.movementRange,environmentData.movementTime).
             SetLoops(-1, LoopType.Yoyo); 
             break;
         }
