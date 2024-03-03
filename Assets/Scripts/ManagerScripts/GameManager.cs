@@ -62,8 +62,8 @@ public class GameManager : Singleton<GameManager>
     public void StarCalculator()
     {
        int noOfStars=(int)((score*scoreMultiplier)/(countDown*1.0f));
-        noOfStars=noOfStars>=3 ? 2:noOfStars;
-       for(int i=0;i<(int)noOfStars;i++)
+        noOfStars=noOfStars>=3 ? 3:noOfStars;
+       for(int i=0;i<noOfStars;i++)
        stars[i].SetActive(true);
 
     }
