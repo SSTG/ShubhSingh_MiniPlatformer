@@ -3259,6 +3259,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 224991926497498366, guid: 93fa432be5c4af044b21592ada451b1e, type: 3}
+      propertyPath: surfaceLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 93fa432be5c4af044b21592ada451b1e, type: 3}

@@ -6,10 +6,12 @@ public class PlayerMovement : MonoBehaviour
 {
     // Start is called before the first frame update
     Rigidbody rb;
-    [SerializeField]float jumpForce;
-    [SerializeField]LayerMask surfaceLayers;
+    public float jumpForce;
+    [SerializeField]LayerMask surfaceLayer;
+    [SerializeField]LayerMask platformLayer;
     [SerializeField]float moveSpeedMultiplier;
     [SerializeField]float surfaceCheckRadius;
+    [SerializeField]float platformCheckRadius;
     [SerializeField]float dashForce;
     bool isGrounded;
 
@@ -19,8 +21,8 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-        isGrounded = Physics.CheckSphere(transform.position,surfaceCheckRadius,surfaceLayers);
-      
+        isGrounded = Physics.CheckSphere(transform.position,surfaceCheckRadius,surfaceLayer) || 
+                    Physics.CheckSphere(transform.position,platformCheckRadius,platformLayer);
     }
     void OnEnable()
     {

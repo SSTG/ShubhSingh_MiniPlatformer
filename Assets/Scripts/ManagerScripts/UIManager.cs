@@ -21,6 +21,12 @@ public class UIManager : Singleton<UIManager>
         StartCoroutine("FadeOutText");
 
     }
+    public void FadeInText(string msg)
+    {   
+         generalText.DOText(msg,2);
+        StartCoroutine("FadeOutText");
+
+    }
     IEnumerator FadeOutText()
     {
         yield return new WaitForSeconds(5f);

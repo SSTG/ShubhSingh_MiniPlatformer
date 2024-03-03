@@ -13,7 +13,7 @@ public class Platform : MonoBehaviour
     public UnityEvent onPlayerDeath;
     Rigidbody rb;
     Vector3 initialPosition;
-    FixedJoint fixedJoint;
+    
     void Start()
     {
         initialPosition=transform.position;
@@ -33,8 +33,8 @@ public class Platform : MonoBehaviour
             KillPlayer();
             
         }
-        
-   
+       //other.gameObject.GetComponent<PlayerMovement>().MovePlayer(rb.velocity.x);
+        //other.gameObject.GetComponent<PlayerMovement>().jumpForce-=rb.velocity.y;
     }
    
      
