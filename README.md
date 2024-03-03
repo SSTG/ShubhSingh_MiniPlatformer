@@ -32,3 +32,4 @@ Build Status:
 The first build has been uploaded within the releases folder. This build, even though tested for any bugs, is still not the final build.
 There'd be some further testing after which the second build will be uploaded.
 
+Video Link: https://www.youtube.com/watch?v=0a2STTyAME8
