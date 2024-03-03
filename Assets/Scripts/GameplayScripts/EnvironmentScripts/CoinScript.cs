@@ -37,16 +37,13 @@ public class CoinScript : MonoBehaviour
         GameManager.Score+=scorePoints;
         //GameManager.CountDown+=timePoints;
         soundManager.PlaySound(coinData.onCollectSound);
-        uiManager.FadeInText(coinData.name+" Coin!!!");
+        uiManager.FadeInText(coinData.name+" Coin!!!",coinData.material.color);
         colorChange.FadeInColor(coinData.material.color);
-        Invoke(nameof(uiManager.FadeOutText),2f);
-        StartCoroutine(FadeOutColor(colorChange));
+       
+        
         Destroy(this.gameObject);
     }
-    IEnumerator FadeOutColor(ColorChange colorChange)
-    {
-        yield return new WaitForSeconds(4f);
-        colorChange.FadeOutColor();
-    }
+    
+    
     
 }

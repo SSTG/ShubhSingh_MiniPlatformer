@@ -9,13 +9,22 @@ public class UIManager : Singleton<UIManager>
 {
     // Start is called before the first frame update
     public Text generalText;
-    public void FadeInText(string msg)
+    Color originalColor;
+    void Awake()
     {
+        
+    }
+    public void FadeInText(string msg,Color color)
+    {   
+        generalText.DOColor(color,2);
         generalText.DOText(msg,2);
+        StartCoroutine("FadeOutText");
 
     }
-    public void FadeOutText()
+    IEnumerator FadeOutText()
     {
-        generalText.DOText("",2);
+        yield return new WaitForSeconds(5f);
+       generalText.DOText("",2f);
+       generalText.DOColor(originalColor,2f);
     }
 }

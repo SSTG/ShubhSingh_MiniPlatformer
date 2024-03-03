@@ -36,13 +36,8 @@ public class Platform : MonoBehaviour
         
    
     }
-     void OnCollisionExit(Collision other) {
-        if(other.gameObject.CompareTag("Player")){
-        other.gameObject.GetComponent<Rigidbody>().isKinematic=false;
-        
-       
-    }
-     }
+   
+     
     void KillPlayer()
     {
         onPlayerDeath?.Invoke();

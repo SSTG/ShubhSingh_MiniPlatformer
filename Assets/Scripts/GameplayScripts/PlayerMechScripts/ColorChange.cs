@@ -18,9 +18,11 @@ public class ColorChange : MonoBehaviour
     public void FadeInColor(Color secondColor)
     {
         material.DOColor(secondColor,1f);
+        StartCoroutine("FadeOutColor");
     }
-    public void FadeOutColor()
+    IEnumerator FadeOutColor()
     {
+        yield return new WaitForSeconds(5f);
         material.DOColor(originalColor,1f);
     }
 }

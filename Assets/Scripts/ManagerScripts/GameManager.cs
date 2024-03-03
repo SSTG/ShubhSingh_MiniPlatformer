@@ -13,6 +13,10 @@ public class GameManager : Singleton<GameManager>
     [SerializeField]Text scoreText;
     [SerializeField]Text highScoreText;
     [SerializeField]Text countDownText;
+    [Header("Final Stars")]
+    [SerializeField]GameObject[] stars;
+    [Header("Final Score Calculators")]
+    [SerializeField]float scoreMultiplier;
     
     bool isPaused=false;
     static int score;
@@ -55,24 +59,40 @@ public class GameManager : Singleton<GameManager>
         Destroy(FindObjectOfType<CameraFollow>());
         Time.timeScale=0;
     }
+    public void StarCalculator()
+    {
+       int noOfStars=(int)(score*scoreMultiplier/countDown);
+       noOfStars=Mathf.Clamp(noOfStars,0,2);
+       for(int i=0;i<noOfStars;i++)
+       stars[i].SetActive(true);
+
+    }
+    public void HaultGame()
+    {
+        Time.timeScale=0;
+    }
+    public void UnhaultGame()
+    {
+         Time.timeScale=1;
+    }
     public void PauseGame()
     {
         if(isPaused){
         UnpauseGame();
         return;}
-        Time.timeScale=0;
+        HaultGame();
         isPaused=true;
         onPausedGame?.Invoke();
     }
     public void UnpauseGame()
     {
-        Time.timeScale=1;
+       UnhaultGame();
         isPaused=false;
         onUnpausedGame?.Invoke();
     }
     public void SaveScore()
     {
-        if(PlayerPrefs.HasKey("HighScore") && score>=PlayerPrefs.GetInt("HighScore"))
+        if(!PlayerPrefs.HasKey("HighScore") || score>=PlayerPrefs.GetInt("HighScore"))
         PlayerPrefs.SetInt("HighScore",score);
     }
 }
