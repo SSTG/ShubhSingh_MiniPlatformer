@@ -15,7 +15,7 @@ public class SceneManagerScript : Singleton<SceneManagerScript>
     }
     public void isFirstTimePlay()
     {
-        if(!PlayerPrefs.HasKey("HighScore"))
+        if(!PlayerPrefs.HasKey("HighScore1"))
         firstTimePlay?.Invoke();
         else
         notFirstTimePlay?.Invoke();

@@ -7,6 +7,7 @@ public class CoinScript : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField]CoinData coinData;
+    GameManager gameManager;
     MeshRenderer meshRenderer;
     UIManager uiManager;
     int scorePoints;
@@ -16,6 +17,7 @@ public class CoinScript : MonoBehaviour
     {
         meshRenderer=GetComponent<MeshRenderer>();
         uiManager=FindObjectOfType<UIManager>();
+        gameManager=FindObjectOfType<GameManager>();
         soundManager=FindObjectOfType<SoundManager>();
         meshRenderer.material=coinData.material;
     }
@@ -34,7 +36,7 @@ public class CoinScript : MonoBehaviour
     }
     public void CollectCoin(ColorChange colorChange)
     {
-        GameManager.Score+=scorePoints;
+        gameManager.Score+=scorePoints;
         //GameManager.CountDown+=timePoints;
         soundManager.PlaySound(coinData.onCollectSound);
         uiManager.FadeInText(coinData.name+" Coin!!!",coinData.material.color);

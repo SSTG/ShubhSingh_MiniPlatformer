@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 0cc448a42b18f974d822348833f69c37, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -2727,7 +2727,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3544698593209358500, guid: e7b4dd12d3d35134db0f1fc460ccf8dc, type: 3}
       propertyPath: onTrigger.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3544698593209358500, guid: e7b4dd12d3d35134db0f1fc460ccf8dc, type: 3}
       propertyPath: onTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2792,6 +2792,10 @@ PrefabInstance:
     - target: {fileID: 3544698593209358500, guid: e7b4dd12d3d35134db0f1fc460ccf8dc, type: 3}
       propertyPath: onTrigger.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
       value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3544698593209358500, guid: e7b4dd12d3d35134db0f1fc460ccf8dc, type: 3}
+      propertyPath: onTrigger.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_IntArgument
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3544698593209358500, guid: e7b4dd12d3d35134db0f1fc460ccf8dc, type: 3}
       propertyPath: onUntrigger.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -3454,7 +3458,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3544698593209358500, guid: e7b4dd12d3d35134db0f1fc460ccf8dc, type: 3}
       propertyPath: onTrigger.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3544698593209358500, guid: e7b4dd12d3d35134db0f1fc460ccf8dc, type: 3}
       propertyPath: onTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -3466,6 +3470,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3544698593209358500, guid: e7b4dd12d3d35134db0f1fc460ccf8dc, type: 3}
       propertyPath: onTrigger.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3544698593209358500, guid: e7b4dd12d3d35134db0f1fc460ccf8dc, type: 3}
+      propertyPath: onTrigger.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3544698593209358500, guid: e7b4dd12d3d35134db0f1fc460ccf8dc, type: 3}
@@ -3481,6 +3489,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1158764624}
     - target: {fileID: 3544698593209358500, guid: e7b4dd12d3d35134db0f1fc460ccf8dc, type: 3}
+      propertyPath: onTrigger.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1158764624}
+    - target: {fileID: 3544698593209358500, guid: e7b4dd12d3d35134db0f1fc460ccf8dc, type: 3}
       propertyPath: onTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
@@ -3490,6 +3502,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3544698593209358500, guid: e7b4dd12d3d35134db0f1fc460ccf8dc, type: 3}
       propertyPath: onTrigger.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3544698593209358500, guid: e7b4dd12d3d35134db0f1fc460ccf8dc, type: 3}
+      propertyPath: onTrigger.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3544698593209358500, guid: e7b4dd12d3d35134db0f1fc460ccf8dc, type: 3}
@@ -3505,6 +3521,10 @@ PrefabInstance:
       value: SaveScore
       objectReference: {fileID: 0}
     - target: {fileID: 3544698593209358500, guid: e7b4dd12d3d35134db0f1fc460ccf8dc, type: 3}
+      propertyPath: onTrigger.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: StarCalculator
+      objectReference: {fileID: 0}
+    - target: {fileID: 3544698593209358500, guid: e7b4dd12d3d35134db0f1fc460ccf8dc, type: 3}
       propertyPath: onTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: SceneManagerScript, Assembly-CSharp
       objectReference: {fileID: 0}
@@ -3515,6 +3535,14 @@ PrefabInstance:
     - target: {fileID: 3544698593209358500, guid: e7b4dd12d3d35134db0f1fc460ccf8dc, type: 3}
       propertyPath: onTrigger.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
       value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3544698593209358500, guid: e7b4dd12d3d35134db0f1fc460ccf8dc, type: 3}
+      propertyPath: onTrigger.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3544698593209358500, guid: e7b4dd12d3d35134db0f1fc460ccf8dc, type: 3}
+      propertyPath: onTrigger.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_IntArgument
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3544698593209358500, guid: e7b4dd12d3d35134db0f1fc460ccf8dc, type: 3}
       propertyPath: onTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
@@ -3534,6 +3562,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3544698593209358500, guid: e7b4dd12d3d35134db0f1fc460ccf8dc, type: 3}
       propertyPath: onTrigger.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3544698593209358500, guid: e7b4dd12d3d35134db0f1fc460ccf8dc, type: 3}
+      propertyPath: onTrigger.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5365491988401507530, guid: e7b4dd12d3d35134db0f1fc460ccf8dc, type: 3}
@@ -3622,6 +3654,7 @@ MonoBehaviour:
   - {fileID: 2080981453}
   - {fileID: 577470674}
   scoreMultiplier: 7
+  levelNo: 1
   onPausedGame:
     m_PersistentCalls:
       m_Calls:

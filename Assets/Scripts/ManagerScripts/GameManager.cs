@@ -17,13 +17,13 @@ public class GameManager : Singleton<GameManager>
     [SerializeField]GameObject[] stars;
     [Header("Final Score Calculators")]
     [SerializeField]float scoreMultiplier;
-    
+    public int levelNo;
     bool isPaused=false;
-    static int score;
-    static float countDown=0;
+     int score;
+     float countDown=0;
    
-    public static int Score{ get { return score;} set { score=value;}}
-    public static float CountDown{ get{ return CountDown;}set { CountDown=value;}}
+    public  int Score{ get { return score;} set { score=value;}}
+    public  float CountDown{ get{ return CountDown;}set { CountDown=value;}}
     public UnityEvent onPausedGame;
     public UnityEvent onUnpausedGame;
     void Awake()
@@ -34,8 +34,8 @@ public class GameManager : Singleton<GameManager>
     }
     void Start()
     {
-       if(PlayerPrefs.HasKey("HighScore"))
-       highScoreText.text="High Score "+PlayerPrefs.GetInt("HighScore").ToString();
+       if(PlayerPrefs.HasKey("HighScore"+levelNo))
+       highScoreText.text="High Score : "+PlayerPrefs.GetInt("HighScore"+levelNo).ToString();
     }
     void OnEnable()
     {
@@ -61,9 +61,9 @@ public class GameManager : Singleton<GameManager>
     }
     public void StarCalculator()
     {
-       int noOfStars=(int)(score*scoreMultiplier/countDown);
-       noOfStars=Mathf.Clamp(noOfStars,0,2);
-       for(int i=0;i<noOfStars;i++)
+       int noOfStars=(int)((score*scoreMultiplier)/(countDown*1.0f));
+        noOfStars=noOfStars>=3 ? 2:noOfStars;
+       for(int i=0;i<(int)noOfStars;i++)
        stars[i].SetActive(true);
 
     }
@@ -90,9 +90,9 @@ public class GameManager : Singleton<GameManager>
         isPaused=false;
         onUnpausedGame?.Invoke();
     }
-    public void SaveScore()
+    public void SaveScore(int levelNo)
     {
-        if(!PlayerPrefs.HasKey("HighScore") || score>=PlayerPrefs.GetInt("HighScore"))
-        PlayerPrefs.SetInt("HighScore",score);
+        if(!PlayerPrefs.HasKey("HighScore"+levelNo) || score>=PlayerPrefs.GetInt("HighScore"+levelNo))
+        PlayerPrefs.SetInt("HighScore"+levelNo,score);
     }
 }
